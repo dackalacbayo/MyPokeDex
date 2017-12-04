@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import logo from './images/pokedex-logo.png'
+import pokeball from './images/pokeball.gif'
 import './App.css'
 import request from 'superagent'
 import PokedexData from './components/PokedexData'
@@ -11,6 +12,7 @@ class App extends Component {
     search:'',
     details:{}
   }
+
 
   handleChange(e){
     this.setState({search:e.target.value})
@@ -28,21 +30,29 @@ class App extends Component {
     })
   }
 
+
+
   render() {
+
+
+
     console.log(this.state)
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+
         </header>
-        
+                
         <div className="Pokedex-container">
-          
           <div className="Pokedex-search">
+           <img src={pokeball} className="pokeball-logo" alt="logo" /><br/>
+
             <input onChange={this.handleChange.bind(this)} className="poke-search" 
             placeholder="Enter Keywords" /> 
             <button onClick={this.handleSearch.bind(this)} type="submit" value="Search" 
             className="btn-search">Search</button>
+         
           </div>
 
           <PokedexData data={this.state.details} />

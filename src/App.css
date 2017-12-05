@@ -30,13 +30,16 @@ input.poke-search{
   height: 25px;
   margin-left: 10px;
   text-align: center;
-  border-color: #a6a6a6;
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
   margin-top: 10px;
   padding: 5px;
   border: 2px solid #cc0000;
  }
+
+ .poke-search:hover {
+    border: 2px solid #999;
+}
 
 .btn-search{
   width: 80px;
@@ -47,6 +50,8 @@ input.poke-search{
   color: white;
   background-color: #cc0000;
   cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
 
 .btn-save{
@@ -61,7 +66,16 @@ input.poke-search{
   color: white;
   cursor: pointer;
   margin-left: 200px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
+
+.btn-search:hover,.btn-save:hover {
+    background-color: #000;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
@@ -98,7 +112,7 @@ input.poke-search{
   border-radius:3px;
   opacity: 0.9;
 
-  background-image: url("images/poke-bgg.png");
+  background-image: url("images/pokemon_yxx.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: 630px 460px;
@@ -118,10 +132,11 @@ input.poke-search{
 }
 
 .pokemon-moves{
-width: 200px;
-height: 180px;
-margin-left: 10px;
-color: black;
+  width: 130px; 
+  height: auto;
+  margin-left: 50px;
+  margin-top: 80px;
+  color: black;
 }
 
 h4.pokemon-moves{
@@ -130,7 +145,7 @@ h4.pokemon-moves{
   font-size: 20px;
 
 }
-.pokemon-movesList{
+.pokemon-movesList, .pokemon-typeList, .pokemon-abilitiesList{
   line-height: 3px;  
   margin-top: 10px;
   color: white;
@@ -138,88 +153,53 @@ h4.pokemon-moves{
   text-transform:capitalize;
   font-variant:small;
   font-weight:lighter;
+  font-family: "Verdana", sans serif;
 }
 
 .pokemon-types{
-width: 200px;
-height: 180px;
-margin-left: 220px;
-margin-top: -200px;
-color: black;
-position: absolute;
+  width: 130px;
+  height:auto;
+  margin-left: 50px;
+  margin-top: 120px;
+  color: black;
+  position: absolute;
 }
 
-.pokemon-typeList{
-  line-height: 3px;  
-  margin-top: 10px;
-  color: white;
-  text-align: center;
-  text-transform:capitalize;
-  font-variant:small;
-  font-weight:lighter;
-}
-
-.pokemon-basic{
-width: 200px;
-height: 180px;
-margin-left: 430px;
-margin-top: -110px;
-color: black;
-}
 
 .pokemon-basicList{
-  line-height: 3px;
-  color: black;
-  text-align: center;
-  text-transform:capitalize;
-  font-variant:small-caps;
-  font-weight:bold;
-
+  margin-top: 35px;
+  margin-left: 5px;
+  color: white;
+  font-size: 18px;
 }
 
 .pokemon-stats{
-width: 200px;
-height: 180px;
-margin-top: 50px;
-margin-left: 10px;
-color: black;
-position: absolute;
-font-weight: bold;
+  width: 160px;
+  height: auto;
+  margin-top: -125px;
+  margin-left: 460px;
+  position: absolute;
 }
 
 .pokemon-statsList{
   line-height: 3px;  
-  margin-top: 10px;
-  color: black;
+  margin-top: 13px;
+  color: white;
   text-align: left;
-  margin-left: 15px;
+  margin-left: 6px;
   text-transform:capitalize;
-  font-variant:small-caps;
-  font-weight:bold;
+  font-variant:small;
+  font-weight:lighter;
+  font-family: "Verdana", sans serif;
+  font-size: 12px;
 }
 
 .pokemon-abilities{
-  width: 200px;
-  height: 180px;
-  margin-left: 420px;
-  margin-top: -200px;
-  color: black;
+  width: 130px;
+  height: auto;
+  margin-top: 120px;
+  margin-left: 470px;
   position: absolute;
- 
-}
-
-.statSpace{
-  margin-left: 10px;
-}
-
-.pokemon-abilitiesList{
-  line-height: 3px;  
-  margin-top: 10px;
-  color: white;
-  text-align: center;
-  text-transform:capitalize;
-  font-variant:small;
-  font-weight:100;
 }
 
 
@@ -238,7 +218,6 @@ font-weight: bold;
 .pokenote-logo{
   width:220px;
   height: 120px;
-  opacity: 0.9;
   position: absolute;
   margin-left: 80px;
   margin-top: 10px;
@@ -258,19 +237,30 @@ font-weight: bold;
 }
 
 .pokenote-textarea {
-    width: 65%;
-    height: 110px;
-    padding: 25px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    resize: none;
-    margin-left: 110px;
-    margin-top: 95px;
-     border: 2px solid #cc0000;
+  width: 65%;
+  height: 110px;
+  padding: 25px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  margin-left: 110px;
+  margin-top: 95px;
+  border: 2px solid #cc0000;
+}
 
+.poke-note{
+  width: 200px;
+  height: 100px;
+  background-color: red;
+  overflow:auto;
+  
   }
+h5.poke-note{
+  width: 100px;
+  height: 100px;
+}
 
 .pikarun-container{
   height: 50px;
